@@ -12,7 +12,6 @@ class Student(models.Model):
 
     is_active = models.BooleanField(default=True, verbose_name='учится')
 
-
     def __str__(self):
         return f'{self.first_name} {self.last_name}'
 
