@@ -3,6 +3,7 @@ from django import template
 
 register = template.Library()
 
+
 # Создание тега
 @register.simple_tag
 def current_time(format_string):
@@ -19,4 +20,3 @@ def initial_letter_filter(text, autoescape=True):
         esc = lambda x: x
     result = "<strong>%s</strong>%s" % (esc(first), esc(other))
     return mark_safe(result)
-
